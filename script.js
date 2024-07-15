@@ -60,6 +60,11 @@ countBtn.addEventListener("click", (e) => {
 
   // Show the result
   result.innerText = bmi;
+
+// If result is not a number
+  if (result == NaN) {
+    result.innerText = 0;
+  }
 });
 
 resetBtn.addEventListener("click", (e) => {
