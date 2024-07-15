@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RevoU Fundamental Course | Mini Project 1</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <!-- Konten Kiri -->
+      <section id="left-content">
+        <header>
+          <h1>Kalkulator BMI</h1>
+        </header>
+        <article>
+          Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang di kalkulator BMI.
+        </article>
+        <section id="form">
+          <form>
+            <div>
+              <h4>
+                <label>Jenis Kelamin</label>
+              </h4>
+              <input type="radio" value="Pria" name="gender" id="option-pria" />
+              <label for="option-pria">Pria</label>
+              <input type="radio" value="Wanita" name="gender" id="option-wanita" />
+              <label for="option-wanita">Wanita</label>
+            </div>
+            <div>
+              <h4>
+                <label for="input-berat-badan">Berat Badan (kg)</label>
+              </h4>
+              <input type="number" name="input-berat-badan" id="input-berat-badan" required />
+            </div>
+            <div>
+              <h4>
+                <label for="input-tinggi-badan">Tinggi Badan (cm)</label>
+              </h4>
+              <input type="number" name="input-tinggi-badan" id="input-tinggi-badan" required />
+            </div>
+            <div>
+              <h4>
+                <label for="input-usia">Usia</label>
+              </h4>
+              <input type="number" name="input-usia" id="input-usia" required />
+            </div>
+            <div class="action-button">
+              <button id="form-count">Hitung BMI</button>
+              <button id="form-reset">Reset</button>
+            </div>
+          </form>
+          <article>
+            <p>BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat badan Anda.</p>
+          </article>
+        </section>
+      </section>
+      <hr class="divider" />
+      <!-- Konten Kanan -->
+      <section id="right-content">
+        <header>
+          <h2>Hasil</h2>
+        </header>
+        <section id="count-result">
+          <h3>Hasil</h3>
+          <h2>0</h2>
+          <p></p>
+          <button class="download-result">Download Hasil BMI</button>
+        </section>
+        <article id="result-summary"></article>
+        <button><a href="/">Konsultasi Ahli Gizi Via Aplikasi</a></button>
+        <button><a href="/">Registrasi Ahli Gizi</a></button>
+        <div class="get-app">
+          <p>Download Aplikasi</p>
+          <img src="./assets/play-store.png" alt="GET IT ON PLAYSTORE" width="150px" />
+          <img src="./assets/app-store.png" alt="GET IT ON APP STORE" width="150px" />
+        </div>
+      </section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
