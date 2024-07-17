@@ -8,14 +8,18 @@ const result = document.querySelector("#count-result h2");
 const resultInfo = document.querySelector("#count-result h3");
 const resultDesc = document.querySelector("#count-result p");
 const resultSum = document.getElementById("result-summary");
+const radioPria = document.getElementById("option-pria")
+const radioWanita = document.getElementById("option-wanita")
+
+// -- IF SUBMIT BUTTON CLICKED
 
 countBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
-  //   Count
-  const bmi = Math.round((beratBadan.value / (tinggiBadan.value * tinggiBadan.value)) * 10000);
+  // -- COUNT THE BMI FORMULA
+   const bmi = Number(beratBadan.value) / (Number(tinggiBadan.value) / 100 * Number(tinggiBadan.value) / 100);
 
-  // Show Result Information
+  // -- SHOW RESULT INFORMATION
 
   if (bmi < 18.5) {
     resultInfo.innerText = "Kekurangan Berat Badan";
@@ -58,7 +62,7 @@ countBtn.addEventListener("click", (e) => {
     `;
   }
 
-  // Show the result
+  // -- SHOW THE RESULT
   result.innerText = bmi;
 
   // If form is invalid
@@ -72,16 +76,19 @@ countBtn.addEventListener("click", (e) => {
   }
 });
 
+// -- IF RESET BUTTON CLICKED
 
 resetBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
+  radioPria.checked="";
+  radioWanita.checked="";
   beratBadan.value = "";
   tinggiBadan.value = "";
   usia.value = "";
-
   resultInfo.innerText = "Hasil";
   result.innerText = 0;
   resultDesc.innerText = "";
   resultSum.innerText = "";
+  
 });
