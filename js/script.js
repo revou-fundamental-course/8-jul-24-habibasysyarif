@@ -61,11 +61,17 @@ countBtn.addEventListener("click", (e) => {
   // Show the result
   result.innerText = bmi;
 
-// If result is not a number
-  if (result == NaN) {
+  // If form is invalid
+  if (beratBadan.value == "" || tinggiBadan.value == "" || usia.value == "") {
     result.innerText = 0;
+    resultInfo.innerText = "Hasil";
+    resultDesc.innerText = "";
+    resultSum.innerText = "";
+
+    alert("Mohon isi dengan data yang valid!");
   }
 });
+
 
 resetBtn.addEventListener("click", (e) => {
   e.preventDefault();
