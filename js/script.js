@@ -17,8 +17,7 @@ countBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
   // -- COUNT THE BMI FORMULA
-   const bmi = Number(beratBadan.value) / (Number(tinggiBadan.value) / 100 * Number(tinggiBadan.value) / 100);
-
+   const bmi = Math.round((beratBadan.value / (tinggiBadan.value * tinggiBadan.value)) * 10000);
   // -- SHOW RESULT INFORMATION
 
   if (bmi < 18.5) {
