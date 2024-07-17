@@ -17,7 +17,9 @@ countBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
   // -- COUNT THE BMI FORMULA
+  
    const bmi = Math.round((beratBadan.value / (tinggiBadan.value * tinggiBadan.value)) * 10000);
+  
   // -- SHOW RESULT INFORMATION
 
   if (bmi < 18.5) {
@@ -62,10 +64,14 @@ countBtn.addEventListener("click", (e) => {
   }
 
   // -- SHOW THE RESULT
+  
   result.innerText = bmi;
 
-  // If form is invalid
+  // -- IF THE FORM IS EMPTY
+  
   if (beratBadan.value == "" || tinggiBadan.value == "" || usia.value == "") {
+    radioPria.checked="";
+    radioWanita.checked="";
     result.innerText = 0;
     resultInfo.innerText = "Hasil";
     resultDesc.innerText = "";
